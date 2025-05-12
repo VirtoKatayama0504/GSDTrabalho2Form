@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-        
             this.btnVerificar = new System.Windows.Forms.Button();
             this.lstResultado = new System.Windows.Forms.ListBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblStatusConexao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVerificar
             // 
-            this.btnVerificar.Location = new System.Drawing.Point(30, 20);
+            this.btnVerificar.Location = new System.Drawing.Point(245, 60);
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(200, 30);
+            this.btnVerificar.Size = new System.Drawing.Size(185, 30);
             this.btnVerificar.TabIndex = 0;
             this.btnVerificar.Text = "Verificar Rede";
             this.btnVerificar.UseVisualStyleBackColor = true;
@@ -46,20 +47,43 @@
             // lstResultado
             // 
             this.lstResultado.FormattingEnabled = true;
-            this.lstResultado.Location = new System.Drawing.Point(30, 70);
+            this.lstResultado.Location = new System.Drawing.Point(30, 96);
             this.lstResultado.Name = "lstResultado";
-            this.lstResultado.Size = new System.Drawing.Size(400, 150);
+            this.lstResultado.Size = new System.Drawing.Size(400, 121);
             this.lstResultado.TabIndex = 1;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Location = new System.Drawing.Point(246, 20);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(184, 30);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar Verificação";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblStatusConexao
+            // 
+            this.lblStatusConexao.AutoSize = true;
+            this.lblStatusConexao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatusConexao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatusConexao.Location = new System.Drawing.Point(266, 29);
+            this.lblStatusConexao.Name = "lblStatusConexao";
+            this.lblStatusConexao.Size = new System.Drawing.Size(10, 13);
+            this.lblStatusConexao.TabIndex = 3;
+            this.lblStatusConexao.Text = ".";
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(480, 250);
+            this.Controls.Add(this.lblStatusConexao);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lstResultado);
             this.Controls.Add(this.btnVerificar);
             this.Name = "Form1";
             this.Text = "Verificação Segura de Rede";
             this.ResumeLayout(false);
-        
+            this.PerformLayout();
 
         }
 
@@ -67,6 +91,8 @@
 
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.ListBox lstResultado;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblStatusConexao;
     }
 }
 
